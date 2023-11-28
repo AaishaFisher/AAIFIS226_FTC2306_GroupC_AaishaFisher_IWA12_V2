@@ -34,16 +34,16 @@ const checkout1 = document.querySelector('#book1 .checkout');
 const checkin1 = document.querySelector('#book1 .checkin');
 
 //book2
-const status2 = document.querySelector('#book1 .status');
-const reserve2 = document.querySelector('#book1 .reserve');
-const checkout2 = document.querySelector('#book1 .checkout');
-const checkin2 = document.querySelector('#book1 .checkin');
+const status2 = document.querySelector('#book2 .status');
+const reserve2 = document.querySelector('#book2 .reserve');
+const checkout2 = document.querySelector('#book2 .checkout');
+const checkin2 = document.querySelector('#book2 .checkin');
 
 //book3
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
+const status3 = document.querySelector('#book3 .status');
+const reserve3 = document.querySelector('#book3 .reserve');
+const checkout3 = document.querySelector('#book3 .checkout');
+const checkin3 = document.querySelector('#book3 .checkin');
 
 checkin.0.color = none
 status.0.style.color = STATUS_MAP.status.color
