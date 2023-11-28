@@ -33,11 +33,29 @@ const reserve1 = document.querySelector('#book1 .reserve');
 const checkout1 = document.querySelector('#book1 .checkout');
 const checkin1 = document.querySelector('#book1 .checkin');
 
+const book1Status = status1.textContent.trim();
+
+if (book1Status in STATUS_MAP) {
+    status1.style.color = STATUS_MAP[book1Status].color;
+    reserve1.disabled = !STATUS_MAP[book1Status].canReserve;
+    checkout1.disabled = !STATUS_MAP[book1Status].canCheckout;
+    checkin1.disabled = !STATUS_MAP[book1Status].canCheckIn;
+}
+
 //book2
 const status2 = document.querySelector('#book2 .status');
 const reserve2 = document.querySelector('#book2 .reserve');
 const checkout2 = document.querySelector('#book2 .checkout');
 const checkin2 = document.querySelector('#book2 .checkin');
+
+const book2Status = status2.textContent.trim();
+
+if (book2Status in STATUS_MAP) {
+    status2.style.color = STATUS_MAP[book1Status].color;
+    reserve2.disabled = !STATUS_MAP[book1Status].canReserve;
+    checkout2.disabled = !STATUS_MAP[book1Status].canCheckout;
+    checkin2.disabled = !STATUS_MAP[book1Status].canCheckIn;
+}
 
 //book3
 const status3 = document.querySelector('#book3 .status');
@@ -45,20 +63,16 @@ const reserve3 = document.querySelector('#book3 .reserve');
 const checkout3 = document.querySelector('#book3 .checkout');
 const checkin3 = document.querySelector('#book3 .checkin');
 
-checkin.0.color = none
-status.0.style.color = STATUS_MAP.status.color
-reserve.0 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout.0 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin.0 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+const book3Status = status2.textContent.trim();
 
-checkin.1.color = none
-status.1.style.color = STATUS_MAP.status.color
-reserve.1 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout.1 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin.1 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+if (book3Status in STATUS_MAP) {
+    status3.style.color = STATUS_MAP[book3Status].color;
+    reserve3.disabled = !STATUS_MAP[book3Status].canReserve;
+    checkout3.disabled = !STATUS_MAP[book3Status].canCheckout;
+    reserve3.style.color = checkout3.style.color = checkin3.style.color = 'black';
 
-checkin.2.color = none
-status.2.style.color = STATUS_MAP.status.color
-reserve.2 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout.2 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+    if (!STATUS_MAP[book3Status].canCheckIn) {
+        checkin3.style.color = 'gray';
+    }
+}
+
