@@ -34,10 +34,10 @@ const checkout1 = document.querySelector('#book1 .checkout');
 const checkin1 = document.querySelector('#book1 .checkin');
 
 //book2
-status = selector(status)
-reserve = selector(reserve)
-checkout = selector(checkout)
-checkin = selector(checkin)
+const status2 = document.querySelector('#book1 .status');
+const reserve2 = document.querySelector('#book1 .reserve');
+const checkout2 = document.querySelector('#book1 .checkout');
+const checkin2 = document.querySelector('#book1 .checkin');
 
 //book3
 status = selector(status)
